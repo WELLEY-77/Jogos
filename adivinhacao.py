@@ -1,5 +1,4 @@
 from random import randint
-from unicodedata import name
 
 def jogar_adivinhacao():
         
