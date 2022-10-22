@@ -10,15 +10,17 @@ def jogar_forca():
 
     while(not enforcou and not acertou):
 
-        chute = input('Digite uma letra: ')
+        chute = input('Digite uma letra: ').strip()
+        
+        #---------Pode fazer dessa outra maneira tambem para tira os espaços
+        #chute = chute.strip()
 
         index = 0
         for letra in palavra_secreta:
-            if (chute == letra):
+            if (chute.upper() == letra.upper()):
                 print('Encontrei a letra {} na posição {} '.format(chute,index))
             index = index + 1
-        print('Jogando...')
-    
+
     print('FIM DE JOGO')
 
 if (__name__ == '__main__'):
