@@ -19,10 +19,10 @@ def jogar_forca():
         index = 0
         for letra in palavra_secreta:
             if (chute.upper() == letra.upper()):
-                letra_secreta[index] = letra
-                print(letra_secreta)
+                letra_secreta[index] = letra  
             index = index + 1
-
+            
+        print(letra_secreta)
     print('FIM DE JOGO')
 
 if (__name__ == '__main__'):
