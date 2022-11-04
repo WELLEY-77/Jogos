@@ -18,7 +18,7 @@ def jogar_jokepor():
     computador = randint(1,3)
 
     while True:
-        jogador = int(input('Qual a sua jogada: '))
+        jogador = abs(int(input('Qual a sua jogada: ').strip()))
 
         if jogador == 1:
             break
