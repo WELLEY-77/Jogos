@@ -15,7 +15,7 @@ def escollher_jogo():
         [ 2 ] Forca
         [ 3 ] Jokenpor ''')
 
-        jogo_selecionado = int(input('Qual a sua opção: '))
+        jogo_selecionado = abs(int(input('Qual a sua opção: ').strip()))
 
         if (jogo_selecionado == 1):
             jogar_adivinhacao()
