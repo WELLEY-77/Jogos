@@ -4,7 +4,13 @@ def jogar_forca():
     print('*'*26)
     
     palavra_secreta = 'banana'.upper()
-    letra_secreta = ['_', '_', '_', '_', '_', '_']
+    #-----List comprehensions
+    letra_secreta = ['_' for letra in palavra_secreta]
+
+    #---funciona tambem dessa forma--------
+
+    #for letra in palavra_secreta:
+    #    letra_secreta.append('_')
 
     acertou = False
     enforcou = False
@@ -27,9 +33,13 @@ def jogar_forca():
         
         enforcou = tentativas == 6
         acertou = '_' not in letra_secreta
-        
+
         print(letra_secreta)
-            
+
+    if (acertou):
+        print('Você acertou!!')
+    else:
+        print('Você errou!!')        
     print('FIM DE JOGO')
 
 if (__name__ == '__main__'):
