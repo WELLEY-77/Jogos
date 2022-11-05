@@ -26,6 +26,8 @@ def jogar_forca():
             tentativas += 1
         
         enforcou = tentativas == 6
+        acertou = '_' not in letra_secreta
+        
         print(letra_secreta)
             
     print('FIM DE JOGO')
