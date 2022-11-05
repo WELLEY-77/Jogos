@@ -29,7 +29,7 @@ def jogar_forca():
     if (acertou):
         imprime_menssagem_vencedor()
     else:
-        imprime_menssagem_perdedor()        
+        imprime_menssagem_perdedor(palavra_secreta)        
     print('FIM DE JOGO')
 
 
@@ -75,10 +75,37 @@ def marca_chute_correto(chute,letras_acertadas,palavra_secreta):
         index = index + 1
 
 def imprime_menssagem_vencedor():
-    print('Você acertou!!')
+    print("Parabéns, você ganhou!")
+    print("       ___________      ")
+    print("      '._==_==_=_.'     ")
+    print("      .-\\:      /-.    ")
+    print("     | (|:.     |) |    ")
+    print("      '-|:.     |-'     ")
+    print("        \\::.    /      ")
+    print("         '::. .'        ")
+    print("           ) (          ")
+    print("         _.' '._        ")
+    print("        '-------'       ")
 
-def imprime_menssagem_perdedor():
-    print('Você perdeu!!')
+def imprime_menssagem_perdedor(palavra_secreta):
+    print("Puxa, você foi enforcado!")
+    print("A palavra era {}".format(palavra_secreta))
+    print("    _______________         ")
+    print("   /               \       ")
+    print("  /                 \      ")
+    print("//                   \/\  ")
+    print("\|   XXXX     XXXX   | /   ")
+    print(" |   XXXX     XXXX   |/     ")
+    print(" |   XXX       XXX   |      ")
+    print(" |                   |      ")
+    print(" \__      XXX      __/     ")
+    print("   |\     XXX     /|       ")
+    print("   | |           | |        ")
+    print("   | I I I I I I I |        ")
+    print("   |  I I I I I I  |        ")
+    print("   \_             _/       ")
+    print("     \_         _/         ")
+    print("       \_______/           ")
 
 
 
