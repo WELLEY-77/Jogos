@@ -1,9 +1,22 @@
+from random import randint
+
 def jogar_forca():
     print('*'*26)
     print('BEM VINDO AO JOGO DA FORCA')
     print('*'*26)
     
-    palavra_secreta = 'banana'.upper()
+    arquivo = open('palavras.txt','r')
+
+    palavra = []
+    for linha in arquivo:
+        linha = linha.strip()
+        palavra.append(linha)
+
+    arquivo.close()
+
+    numero = randint(0,len(palavra))
+    palavra_secreta = palavra[numero].upper()
+
     #-----List comprehensions
     letra_secreta = ['_' for letra in palavra_secreta]
 
