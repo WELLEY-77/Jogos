@@ -1,10 +1,11 @@
 from random import randint
 
-def jogar_forca():
+def imprime_menssagen_abertura():
     print('*'*26)
     print('BEM VINDO AO JOGO DA FORCA')
     print('*'*26)
-    
+
+def carrega_palavra_secreta():
     arquivo = open('palavras.txt','r')
 
     palavra = []
@@ -16,14 +17,26 @@ def jogar_forca():
 
     numero = randint(0,len(palavra))
     palavra_secreta = palavra[numero].upper()
+    return palavra_secreta
 
-    #-----List comprehensions
-    letra_secreta = ['_' for letra in palavra_secreta]
-
+def inicializa_letras_acertadas(palavra):
     #---funciona tambem dessa forma--------
 
     #for letra in palavra_secreta:
     #    letra_secreta.append('_')
+
+    #-----List comprehensions
+    return ['_' for letra in palavra]
+
+    
+def jogar_forca():
+
+    imprime_menssagen_abertura()
+
+    palavra_secreta = carrega_palavra_secreta()
+    
+    letra_secreta = inicializa_letras_acertadas(palavra_secreta)
+    
 
     acertou = False
     enforcou = False
