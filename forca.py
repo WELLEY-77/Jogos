@@ -31,7 +31,7 @@ def jogar_forca():
 
     while(not enforcou and not acertou):
 
-        chute = input('Digite uma letra: ').strip().upper()
+        chute = input('Digite uma letra: ').strip().upper()[0]
         
         #---------Pode fazer dessa outra maneira tambem para tira os espaços
         #chute = chute.strip()
